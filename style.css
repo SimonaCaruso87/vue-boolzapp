@@ -110,5 +110,27 @@
     height: 80vh;
     border: 1px solid pink;
     overflow-y: scroll;
+    display: flex;
     
+}
+
+.message-received{
+    background-color: white;
+    width: 50vh;
+    height: 70px;
+    padding: 10px;
+    align-items: flex-end;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.message-sent{
+
+    background-color: #D5F9BA;
+    width: 50vh;
+    height: 70px;
+    padding: 10px;
+    align-items: flex-start;
+    margin: 50px;
+    border-radius: 10px;
 }
