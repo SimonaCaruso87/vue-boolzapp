@@ -50,3 +50,11 @@
    color: #B1B1B1;
 }
 
+.bg-research-message{
+    background-color: #8EDAFC;
+}
+
+.font-circle{
+    border-radius: 50%;
+    background-color: white;
+}
