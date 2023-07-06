@@ -2,4 +2,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 2560px;
 }
+
+.header-bg{
+   background-color: #009688;
+   height: 20vh;
+   margin: 0 auto ;
+}
+
+.header-bottom-bg{
+    background-color: #DADBD4;
+    height: calc(100vh - 20vh);
+    margin: 0 auto;
+
+}
+
+.container-chat{
+    height: 80vh;
+    width: 80%;
+    background-color: yellow;
+    border: 1px solid green;
+    top:5vh;
+    left:10%;
+}
+
+.container-left{
+    width:40%;
+}
+
+.container-right{
+    width:60%;
+    border:1px solid green;
+
+}
+
+.profil-pic{
+    border-radius: 50%;
+    max-width: 60px;
+}
+
+.profil-color{
+    background-color: #EAEAEA;
+}
+
+.bg-fw{
+   color: #B1B1B1;
+}
+
