@@ -6,7 +6,7 @@
 }
 
 .header-bg{
-   background-color: #009688;
+   background-color: #5f145f;
    height: 20vh;
    margin: 0 auto ;
 }
@@ -33,13 +33,14 @@
 .container-right{
     width:60%;
     height: 800px;
-    border: 1px solid grey;
+   
 
 }
 
 .profil-pic{
     border-radius: 50%;
     max-width: 60px;
+    
 }
 
 .container-left-header-top {
@@ -52,7 +53,7 @@
 }
 
 .container-left-header-bottom{
-    background-color: #8EDAFC;
+    background-color: #e658e6;
     height: 120px;
 }
 
@@ -65,7 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color:#8EDAFC;
+    color: #e658e6;
 }
 
 .research-container-main-top{
@@ -91,6 +92,8 @@
 .profil-message{
     background-color: #EAEAEA;
     height:100px;
+    border-left: 1px solid rgb(211, 211, 211);
+
 }
 
 
@@ -108,7 +111,7 @@
 }
 
 .profil-color-chat:hover{
-    background-color : rgb(184, 184, 184);
+    background-color :  #e658e6;
 }
 
 .background-chat{
@@ -146,10 +149,11 @@
     height:70px;
     background-color: #F3EEEA;
     padding: 10px;
+    border-left: 1px solid rgb(211, 211, 211);
 }
 
 .date-text-chat{
-    margin: -5px;
+    margin:7px;
     font-size: 10px;
 }
 
@@ -160,5 +164,5 @@
 }
 
 .contact-active{
-    background-color : rgb(184, 184, 184);
+    background-color :  #eb50eb;
 }

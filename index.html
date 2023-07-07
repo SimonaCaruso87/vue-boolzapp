@@ -107,14 +107,14 @@
                 <div class="profil-message d-flex p-3">
     
                     <div class="photo-member-chat">
-                        <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
+                        <img  class="profil-pic" :src="contacts[contactActive].avatar" :alt="contacts[contactActive].name">
                     </div>    
 
                     <div class="d-flex justify-content-between photo-member-chat-text">
                         <div>
                             <div class="ms-4 fw-bold fs-4">{{contacts[contactActive].name}}</div>
                             <div class="text-secondary ms-4">
-                                {{contacts[contactActive].date}}
+                                Ultimo accesso oggi alle 12:00
                             </div>
                         </div>
                         <div>

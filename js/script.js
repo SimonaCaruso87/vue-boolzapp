@@ -3,12 +3,12 @@ const { createApp } = Vue ;
 createApp({
     data(){
         return{
-            contactActive : 2 ,
+            contactActive : 6 ,
             newMessage : "" ,
             reserchText : "" ,
             contacts: [
                 {
-                    name: 'Michele',
+                    name: 'Pietro',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
                     messages: [
@@ -30,7 +30,7 @@ createApp({
                 ],
                 },
                 {
-                    name: 'Fabio',
+                    name: 'Luca',
                     avatar: './img/avatar_2.jpg',
                     visible: true,
                     messages: [
@@ -52,7 +52,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Samuele',
+                    name: 'Fra Bon',
                     avatar: './img/avatar_3.jpg',
                     visible: true,
                     messages: [
@@ -74,7 +74,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro B.',
+                    name: 'Fra Di Corpo',
                     avatar: './img/avatar_4.jpg',
                     visible: true,
                     messages: [
@@ -91,7 +91,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro L.',
+                    name: 'Michela',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
                     messages: [
@@ -108,13 +108,13 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
-                    avatar: './img/avatar_5.jpg',
+                    name: 'Luigi',
+                    avatar: './img/avatar_6.jpg',
                     visible: true,
                     messages: [
                     {
                     date: '10/01/2020 15:30:55',
-                    message: 'Ciao Claudia, hai novità?',
+                    message: 'Ciao Luigi, hai novità?',
                     status: 'sent'
                     },
                     {
@@ -130,24 +130,29 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Federico',
+                    name: 'Alessio',
                     avatar: './img/avatar_7.jpg',
                     visible: true,
                     messages: [
                     {
                     date: '10/01/2020 15:30:55',
-                    message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                    message: 'Avevo scritto male lenght , per questo non funzionava',
                     status: 'sent'
                     },
                     {
                     date: '10/01/2020 15:50:00',
-                    message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                    message: 'Lo sai quante volte ci sbatterai la testa?',
+                    status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Tantissime!',
                     status: 'received'
                     }
                 ],
                 },
                 {
-                    name: 'Davide',
+                    name: 'Alessandro',
                     avatar: './img/avatar_8.jpg',
                     visible: true,
                     messages: [
@@ -167,7 +172,29 @@ createApp({
                     status: 'received'
                     }
                 ],
-                }
+                },
+                {
+                    name: 'Martina',
+                    avatar: './img/avatar_9.jpg',
+                    visible: true,
+                    messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Ciao mamma , posso uscire con carlotta?',
+                    status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Non ti accompagno da nessuna parte!',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 15:51:00',
+                    message: 'PErche :( ?',
+                    status: 'received'
+                    }
+                ],
+                },
             ]
         }
     },
