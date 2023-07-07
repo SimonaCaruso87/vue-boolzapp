@@ -21,6 +21,11 @@
 </head>
 <body class="position-relative">
 
+
+    <!-- <div id="app">
+    {{ contacts }}
+    </div> -->
+
 <!-- Base sfondi esercizio -->    
 <header>
     <div>
@@ -37,7 +42,7 @@
             <!-- Container Di sinistra -->
             <div class="container-left">
                 <!-- name user Simona-->
-                <div class="profil-color d-flex justify-content-between p-3">
+                <div class="container-left-header-top d-flex justify-content-between p-3">
                     <div><img  class="profil-pic" src="img/avatar_io.jpg" alt="Simona">
                         <span class="ms-4 fw-bold fs-4">Simona</span>
                     </div>
@@ -50,7 +55,7 @@
 
                 </div>
                 <!-- Ricevi notifiche nuovi mess -->
-                <div class="d-flex bg-research-message p-4">
+                <div class="d-flex container-left-header-bottom p-4">
                     <div class="font-circle me-2">
                         <i class="fa-solid fa-bell-slash fa-2xl "></i>
                     </div>    
@@ -60,7 +65,7 @@
                     </div>
                 </div>
                 <!-- Barra ricerca nuova chat -->
-                <div class="research-container d-flex">
+                <div class="research-container-main-top d-flex">
                     <div class="research-name-chat mt-3 ms-3 mb-3 me-0 d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-magnifying-glass fa-xl p-3 text-secondary"></i>
                     </div>
@@ -206,10 +211,10 @@
                 </div>
  
             </div>
-
+        <!-- Container Right-->
             <div class="container-right">
 
-                <div class="profil-color-chat d-flex p-3">
+                <div class="profil-message d-flex p-3">
     
                     <div class="photo-member-chat">
                         <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
@@ -236,24 +241,25 @@
                 </div>
 
                 <!-- Container Chat con Background -->
-                <div class="background-chat">
-                        <div class="d-flex justify-content-end align-items-end h-25">
-                            <div class="message-sent">Hai portato a spasso il cane? <span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:00</span></div>
+                <div class="background-chat p-5">
+                        <div class="d-flex justify-content-end align-items-end">
+                            <div class="message-sent">Hai portato a spasso il cane? hai raccolto la cacca ?hai fatto la spesa= Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:00</span></div>
                         </div>
-                        <div class="d-flex justify-content-end align-items-end h-25">
-                            <div class="message-sent">Ricordati di stendere i panni<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:01</span></div>
+                        <div class="d-flex justify-content-end align-items-end">
+                            <div class="message-sent">Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:01</span></div>
                         </div>
-                        <div class="d-flex justify-content-start align-items-start h-25">
-                            <div class="message-received">Tutto fatto<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:04</span></div>
+                        <div class="d-flex justify-content-start align-items-start">
+                            <div class="message-received">Tutto fatto placidsa babba Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:04</span></div>
                         </div>
                         
                         
                 </div>
 
             
-                <div class="d-flex justify-content-between container-enter-text container-message">
+                <div class="d-flex justify-content-between container-enter-text">
                     <div><i class="bg-fw fa-regular fa-face-smile fa-xl p-3"></i></div>
-                    <div class="border-3 message-chat">Scrivi un messaggio</div>
+                    <div class="border-3 message-chat">Scrivi un 
+                        messaggio</div>
                     <div><i class="bg-fw fa-solid fa-microphone fa-xl p-3"></i></div>
                 </div>
             </div>
@@ -264,9 +270,7 @@
 </main>
 
 
-<!-- <div id="app">
-    {{ contacts }}
-</div> -->
+
     <!-- Axios Vue -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
