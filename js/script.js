@@ -198,10 +198,14 @@ createApp({
         }, 1000);
       },
         reserchT(){
-           for (let index = 0; index < contacts.length; index++) {
-            const element = contacts[index].name;
-            if(element.includes(this.reserchText)){
-                
+           for (let index = 0; index < this.contacts.length; index++) {
+
+            const element = this.contacts[index].name;
+            const elementSmall = element.toLowerCase();
+
+            this.contacts[index].visible = true
+            if(!elementSmall.includes(this.reserchText)){
+                this.contacts[index].visible = false
             }
            } 
         }
