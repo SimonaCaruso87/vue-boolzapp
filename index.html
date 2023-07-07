@@ -21,11 +21,8 @@
 </head>
 <body class="position-relative">
 
-
-    <!-- <div id="app">
-    {{ contacts }}
-    </div> -->
-
+<!-- Vue Container -->
+    <div id="app">
 <!-- Base sfondi esercizio -->    
 <header>
     <div>
@@ -69,20 +66,21 @@
                     <div class="research-name-chat mt-3 ms-3 mb-3 me-0 d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-magnifying-glass fa-xl p-3 text-secondary"></i>
                     </div>
-                    <div class=" d-flex justify-content-center  align-items-center bold fs-5 p-3 mt-3 ms-0 mb-3 me-3 research-text">Cerca o inizia una nuova chat</div>
+                    <div class=" d-flex justify-content-center  align-items-center bold fs-5 mt-3 ms-0 mb-3 me-3 research-text"><input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100 h-100" @keyup="reserchT()"  v-model="reserchText" ></div>
                 </div>
 
                 <!-- Container Member Chat -->
                 <div class="chat-scroll">
-                    <div class="profil-color-chat d-flex p-3">
+                    <div class="profil-color-chat d-flex p-3" v-for="(singleContacts , index) in contacts" @click="clicked(index)" :class="contactActive == index ? 'contact-active' : '' ">
+
 
                         <div class="photo-member-chat">
-                            <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
+                            <img  class="profil-pic" :src="singleContacts.avatar" :alt="singleContacts.name">
                         </div>    
     
                         <div class="d-flex justify-content-between photo-member-chat-text">
                             <div>
-                                <div class="ms-4 fw-bold fs-4">Francesco Di Corpo</div>
+                                <div class="ms-4 fw-bold fs-4">{{singleContacts.name}} </div>
                                 <div class="text-secondary ms-4">
                                     Ultimo messaggio inviato
                                 </div>
@@ -96,117 +94,7 @@
     
     
                     </div>
-                    <div class="profil-color-chat d-flex p-3">
-    
-                        <div class="photo-member-chat">
-                            <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
-                        </div>    
-    
-                        <div class="d-flex justify-content-between photo-member-chat-text">
-                            <div>
-                                <div class="ms-4 fw-bold fs-4">Francesco Di Corpo</div>
-                                <div class="text-secondary ms-4">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <div>
-                                <!-- Fontawesone -->
-                                <span class="text-secondary">12:00</span>
-                            </div>
-    
-                    </div>                        
-    
-    
-                    </div>
-                    <div class="profil-color-chat d-flex p-3">
-    
-                        <div class="photo-member-chat">
-                            <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
-                        </div>    
-    
-                        <div class="d-flex justify-content-between photo-member-chat-text">
-                            <div>
-                                <div class="ms-4 fw-bold fs-4">Francesco Di Corpo</div>
-                                <div class="text-secondary ms-4">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <div>
-                                <!-- Fontawesone -->
-                                <span class="text-secondary">12:00</span>
-                            </div>
-    
-                    </div>                        
-    
-    
-                    </div>
-                    <div class="profil-color-chat d-flex p-3">
-    
-                        <div class="photo-member-chat">
-                            <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
-                        </div>    
-    
-                        <div class="d-flex justify-content-between photo-member-chat-text">
-                            <div>
-                                <div class="ms-4 fw-bold fs-4">Francesco Di Corpo</div>
-                                <div class="text-secondary ms-4">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <div>
-                                <!-- Fontawesone -->
-                                <span class="text-secondary">12:00</span>
-                            </div>
-    
-                    </div>                        
-    
-    
-                    </div>
-                    <div class="profil-color-chat d-flex p-3">
-    
-                        <div class="photo-member-chat">
-                            <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
-                        </div>    
-    
-                        <div class="d-flex justify-content-between photo-member-chat-text">
-                            <div>
-                                <div class="ms-4 fw-bold fs-4">Francesco Di Corpo</div>
-                                <div class="text-secondary ms-4">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <div>
-                                <!-- Fontawesone -->
-                                <span class="text-secondary">12:00</span>
-                            </div>
-    
-                    </div>                        
-    
-    
-                    </div>
-                    <div class="profil-color-chat d-flex p-3">
-    
-                        <div class="photo-member-chat">
-                            <img  class="profil-pic" src="img/avatar_1.jpg" alt="Francesco Di Corpo">
-                        </div>    
-    
-                        <div class="d-flex justify-content-between photo-member-chat-text">
-                            <div>
-                                <div class="ms-4 fw-bold fs-4">Francesco Di Corpo</div>
-                                <div class="text-secondary ms-4">
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <div>
-                                <!-- Fontawesone -->
-                                <span class="text-secondary">12:00</span>
-                            </div>
-    
-                    </div>                        
-    
-    
-                    </div>
-    
+                    
 
                 </div>
  
@@ -222,9 +110,9 @@
 
                     <div class="d-flex justify-content-between photo-member-chat-text">
                         <div>
-                            <div class="ms-4 fw-bold fs-4">Francesco Di Corpo</div>
+                            <div class="ms-4 fw-bold fs-4">{{contacts[contactActive].name}}</div>
                             <div class="text-secondary ms-4">
-                                Ultimo accesso oggi alle 12:00
+                                {{contacts[contactActive].date}}
                             </div>
                         </div>
                         <div>
@@ -242,24 +130,13 @@
 
                 <!-- Container Chat con Background -->
                 <div class="background-chat p-5">
-                        <div class="d-flex justify-content-end align-items-end">
-                            <div class="message-sent">Hai portato a spasso il cane? hai raccolto la cacca ?hai fatto la spesa= Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:00</span></div>
-                        </div>
-                        <div class="d-flex justify-content-end align-items-end">
-                            <div class="message-sent">Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:01</span></div>
-                        </div>
-                        <div class="d-flex justify-content-start align-items-start">
-                            <div class="message-received">Tutto fatto placidsa babba Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema Ricordati di stendere i panni testa i funcia , mi stai facendo uscire pazza , pulisci , lava , sistema<span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">12:04</span></div>
-                        </div>
-                        
-                        
+                            <div :class="[singleMessage.status]" v-for="singleMessage in contacts[contactActive].messages">{{singleMessage.message}} <span class="text-secondary d-flex justify-content-end align-items-end date-text-chat">{{singleMessage.date}} </span></div>
                 </div>
 
             
                 <div class="d-flex justify-content-between container-enter-text">
                     <div><i class="bg-fw fa-regular fa-face-smile fa-xl p-3"></i></div>
-                    <div class="border-3 message-chat">Scrivi un 
-                        messaggio</div>
+                    <div class="border-3 message-chat"><input type="text" placeholder="Scrivi il tuo messaggio" class="w-100 h-100" @keyup.enter="newMessages()" v-model="newMessage"></div>
                     <div><i class="bg-fw fa-solid fa-microphone fa-xl p-3"></i></div>
                 </div>
             </div>
@@ -268,6 +145,9 @@
 
     </div>
 </main>
+    </div>
+
+
 
 
 
