@@ -1,5 +1,11 @@
 # vue-boolzapp
 
+<div align="center">
+  
+  <h2 align="center">Simona - Vue Boolzapp</h2>
+
+  ![Simona Portfolio Desktop Demo](./readme-images/boolzapp.png "Vue Boolzapp")
+
 Milestone 1
 ● Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e
 dall’interlocutore (bianco) assegnando due classi CSS diverse
@@ -30,3 +36,11 @@ Consigli utili:
 ● Si possono trascurare le scrollbar verticali, sia nel pannello dei messaggi, che nella
 lista dei contatti
 ● I pulsanti e le icone possono non funzionare 
+
+</div>
+
+<br />
+
+### Demo Screeshots
+
+
